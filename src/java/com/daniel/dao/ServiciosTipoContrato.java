@@ -74,7 +74,7 @@ public class ServiciosTipoContrato {
 			Statement statement = connection.createStatement();
                         
                         
-			ResultSet rs = statement.executeQuery("select * from users");
+			ResultSet rs = statement.executeQuery("select * from Empleado,Tipo_Contrato where Empleado.cc_Emple= Tipo_Contrato.cc_Emple");
 			while (rs.next()) {
 				User user = new User();
 				user.setUserid(rs.getInt("userid"));
